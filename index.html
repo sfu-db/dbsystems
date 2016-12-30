@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Human-in-the-loop Data Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+ript>
+    <![endif]-->
+  </head>
+
+  <body>
+
+
+    <div class="container">
+
+      <h2 id="cmpt843">CMPT 843: Traditional vs. Modern Database Systems (SFU, Spring 2017)</h2>
+
+<h3 id="motivation">Motivation</h3>
+
+<p>The Big Data movement is attracting an increasing number of new researchers to work on data processing related research. On the other hand, the database community has been thinking about how to address data-processing challenges for over 40 years. Numerous elegant ideas were proposed in the past and many of them are being widely applied in industry. Therefore, there is a high need to educate new researchers to learn classical database knowledge and make sure they can stand on the shoulders of giants rather than reinvent the wheel.</p>
+
+
+<h3 id="topics">Topics</h3>
+
+<p>Because of the purpose above, the course will be divided into two parts.</p>
+
+<ol>
+<li>The first part will guide students to read classical database papers that were published before 2000 on the topics including relational model, parallel database systems, transaction processing, query optimization, materialized views, and approximate query processing. </li>
+
+<li>The second part will be mostly about the papers published in the recent ten years on the topics including MapReduce, Spark, Column Store, NoSQL, and NewSQL. </li>
+</ol>
+
+<h3 id="objectives">Objectives</h3>
+
+<p>Through this traditional vs. modern view of data processing, the students should have a much deeper understanding on the Big Data movement and form their own opinion on what's novel about Big Data systems.</p>
+
+
+<p>Furthermore, since this is a graduate seminar, another important objective is to train students to master basic skills for being a researcher. The course will create a number of opportunities for students to learn how to read a paper, how to write a paper review, how to give a good research talk, and how to ask questions during a talk?
+</p>
+
+<h3 id="logistics">Logistics</h3>
+
+<ul>
+  <li><b>Instructor: </b><a href="http://cs.sfu.ca/~jnwang/">Jiannan Wang</a></li>
+  <li><b>Time: </b>Monday, 12:30 - 2:20pm; Wednesday, 12:30 - 1:20pm</li>
+  <li><b>Location: </b>AQ 4150 (Mon), WMC 3210 (Wed)</li>
+  <li><b>Office Hours: </b>By appointment. <a href="mailto:jnwang@sfu.ca">E-mail me</a> to book a slot</li>
+</ul>
+
+
+<h3 id="pre-requisites">Pre-requisites</h3>
+<ul>
+    <li> Students should have taken undergraduate Database Systems courses (See <a href="https://portal.cs.sfu.ca/portal/outlines/1171-CMPT-354-D100/">CMPT 354</a> and <a href="https://portal.cs.sfu.ca/portal/outlines/1171-CMPT-454-D100/">CMPT 454</a> course outlines)</li>
+</ul>
+
+
+
+<h3 id="grading">Grading</h3>
+
+<ul>
+  <li>Paper Presentation: 25% </li>
+  <li>Questions: 10%</li>
+  <li>Paper Review: 20%</li>
+  <li>Blog Post: 10%</li>
+  <li>Final Project: 35% (3% plan + 16% poster + 16% report)</li>
+</ul>
+
+<h3 id="schedule">Schedule</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr class="info">
+      <td><b>Date</b></td>
+      <td><b>Topic</b></td>
+      <td><b>Content</b></td>
+      <td><b>Presenter</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wed 1/4</td>
+      <td>Course Objective I</td>
+      <td> Course Introduction and History of Database Systems</td>
+      <td> Jiannan Wang [<a href='https://github.com/sfu-db/dbsystems/blob/master/Lectures/intro.pdf'>slides</a>]</td>
+    </tr>
+    <tr class="active">
+      <td>Mon 1/16</td>
+      <td>Course Objective II</td>
+      <td> Essential Skills Needed for a PhD Student (How to <a href='Papers/How%20to%20Read%20a%20Paper.pdf'>read</a> & <a href='Papers/review-writing.pdf'>review</a> a paper? How to give a <a href="Papers/giving-a-talk.pdf">talk?</a> How to <a href="https://www.amazon.com/Asking-Right-Questions-11th-Browne/dp/0321907957">ask</a> questions?)</td>
+      <td> Jiannan Wang [<a href='https://github.com/sfu-db/dbsystems/blob/master/Lectures/research-skills.pdf'>slides</a>]</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+ <h3 id="#present-papers">List of Papers</h3>
+<mark>Please quickly scan each paper and rank them based on your preference. Submit the ranking to <a href="https://goo.gl/forms/FPEXVnosd00CCpDj1">here</a> by the end of Sunday 1/8<mark>
+
+Architecture of a Database System (2007)
+
+ <h4 id="part1">Part I: Traditional Database Systems and Techniques (before 2000)</h4>
+ <h5>Background</h5>
+    <ol>
+        <li> <a href="Papers/p110-silberschatz-background.pdf">Database Systems: Achievements and Opportunities (1990)</a> </li>
+    </ol>
+
+<h5>Data Model</h5>
+    <ol start="2">
+        <li> <a href="Papers/p377-codd.pdf">A Relational Model of Data for Large Shared Data Banks (1970)</a> </li>
+        <li> <a href="Papers/datamodel.pdf">What Goes Around Comes Around (1960-2000)</a></li>
+     </ol>
+
+ <h5>Traditional RDBMS</h5>
+      <ol start="4">
+        <li> <a href="Papers/SystemR.pdf">System R: Relational Approach to Data Management (1976)</a> </li>
+        <li> <a href="Papers/postgres.pdf">The Design of Postgres (1986)</a> </li>
+        <li> <a href="Papers/GammaDatabaseMachine.pdf">The Gamma database machine project (1990)</a></li>
+      </ol>
+
+ <h5>Transaction Management</h5>
+      <ol start="7">
+        <li> <a href="Papers/GrayLocks.pdf">Granularity of Locks and Degrees of Consistency in a Shared Data Base (1976, Part 1 only)</a> </li>
+        <li> <a href="Papers/occ-tods1981.pdf">On Optimistic Methods for Concurrency Control (1981)</a>  </li>
+        <li> <a href="Papers/p378-mohan.pdf">Transaction Management in the R* Distributed Database Management System (1986)</a> </li>
+      </ol>
+       <h5>Query Optimization</h5>
+      <ol start="10">
+        <li> <a href="Papers/p23-selinger.pdf">Access Path Selection in a Relational Database Management System (1979)</a> </li>
+        <li> <a href="Papers/Volcano.pdf">The Volcano Optimizer Generator: Extensibility and Efficient Search (1993)</a>  </li>
+        <li> <a href="Papers/p261-avnur.pdf">Eddies: Continuously Adaptive Query Processing (2000)</a> </li>
+      </ol>
+       <h5>Materialized Views and Data Cube</h5>
+      <ol start="13">
+        <li> <a href="Papers/p61-blakeley-view.pdf">Efficiently Updating Materialized Views (1986)</a> </li>
+        <li> <a href="Papers/cube.pdf">Data Cube: A Relational Aggregation Operator Generalizing Group-by, Cross-tab, and Sub-totals (1997)</a>  </li>
+        <li> <a href="Papers/p159-zhao-rolap.pdf">An Array-Based Algorithm for Simultaneous Multidimensional Aggregates (1997)</a> </li>
+      </ol>
+    <h5>Approximiate Query Processing</h5>
+      <ol start="16">
+        <li> <a href="Papers/sample-1986.pdf">Simple Random Sampling from Relational Databases (1986)</a> </li>
+        <li> <a href="Papers/online-aggregation.pdf">Informix under CONTROL: Online Query Processing (2000)</a>  </li>
+        <li> <a href="Papers/approximatequerkamir.pdf">Approximate Query Processing Using Wavelets (2000)</a> </li>
+      </ol>
+
+ <h4 id="part2">Part II: Modern Database Systems and Techniques (after 2000)</h4>
+     <h5>Background</h5>
+      <ol start="19">
+        <li> <a href="Papers/bigdatawhitepaper.pdf">Challenges and Opportunities with Big Data (2011)</a> </li>
+    </ol>
+
+    <h5>MapReduce and Beyond</h5>
+      <ol start="20">
+        <li> <a href="Papers/mapreduce-osdi2004.pdf">MapReduce: Simplified Data Processing on Large Clusters (2003)</a> </li>
+        <li> <a href="Papers/nsdi12-final138.pdf">Resilient Distributed Datasets: A Fault-tolerant Abstraction for In-memory Cluster Computing (2012)</a> </li>
+        <li> <a href="Papers/p13-xin-shark.pdf">Shark: SQL and Rich Analytics at Scale (2013)</a></li>
+      </ol>
+
+    <h5>Column Store</h5>
+      <ol start="23">
+        <li> <a href="Papers/stonebraker-cstore.pdf">C-store: A Column-oriented DBMS (2005)</a> </li>
+        <li><a href="Papers/monet-cidr2005.pdf">MonetDB/X100: Hyper-pipelining query execution (2005)</a></li>
+        <li> <a href="Papers/dremel.pdf">Dremel: Interactive Analysis Of Web-Scale Datasets (2010)</a></li>
+      </ol>
+
+    <h5>NoSQL</h5>
+      <ol start="26">
+        <li> <a href="Papers/bigtable-osdi06.pdf">Bigtable: A Distributed Storage System for Structured Data (2006)</a> </li>
+        <li><a href="Papers/decandia07dynamo.pdf">Dynamo: Amazon's Highly Available Key-Value Store (2007)</a></li>
+        <li> <a href="Papers/CAP-12years.pdf">CAP Twelve Years Later: How the "Rules" Have Changed (2012)</a></li>
+      </ol>
+
+    <h5>NewSQL</h5>
+      <ol start="29">
+        <li> <a href="Papers/harizopoulos-2008.pdf">OLTP Through the Looking Glass, and What We Found There (2008)</a> </li>
+        <li><a href="Papers/Hekaton.pdf">Hekaton: SQL Server's Memory-optimized OLTP Engine (2013)</a></li>
+        <li> <a href="Papers/hyper.pdf">Efficiently Compiling Efficient Query Plans for Modern Hardware (2011)</a></li>
+      </ol>
+
+
+    <h3 id="related-course">References</h3>
+    <ul>
+        <li><a href="http://www.redbook.io/">Redbook - 5th Edition (Peter Bailis, Joseph M. Hellerstein, Michael Stonebraker)</a> </li>
+        <li><a href="https://github.com/rxin/db-readings">Readings in Database  (Reynold Xin) </a> </li>
+        <li><a href="https://sites.google.com/site/cs286fall2014/">CS286: Implementation of Database Systems (UC Berkeley, Fall 2014)</a> </li>
+        <li><a href="http://web.eecs.umich.edu/~mozafari/fall2015/eecs584/">EECS 584: Advanced Database Management Systems (UMichgan, 2015 Fall)</a> </li>
+        <li><a href="http://columbia.github.io/systems-bigdata-class/">Big Data Systems (Columbia, 2016 Spring)</a> </li>
+        <li><a href="http://www.cs.cmu.edu/~pavlo/courses/fall2013/">15-799: Advanced Topics in Database Systems (CMU, 2013 Fall)</a> </li>
+</ul>
+
+
+
+    <div class="row"><h4>&nbsp; </h4><hr><p class="text-center">&nbsp; © Jiannan Wang 2016</p></div>
+
+
+
+    </div>
+
+  </body>
+</html>
