@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Human-in-the-loop Data Management</title>
+    <title>Traditional vs. Modern Database Systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
 
@@ -40,14 +40,14 @@ ript>
 <p>Because of the purpose above, the course will be divided into two parts.</p>
 
 <ol>
-<li>The first part will guide students to read classical database papers that were published before 2000 on the topics including relational model, parallel database systems, transaction processing, query optimization, materialized views, and approximate query processing. </li>
+<li>The first part will guide students to read classical database papers that were published before 2000 on the topics including Data Model, Relational Database Systems, Transaction Management, Query Optimization, Data Cube, and Approximate Query Processing. </li>
 
-<li>The second part will be mostly about the papers published in the recent ten years on the topics including MapReduce, Spark, Column Store, NoSQL, and NewSQL. </li>
+<li>The second part will be mostly about the papers published in the recent ten years on the topics including MapReduce, Spark, Column Store, NoSQL, NewSQL, ML over SQL. </li>
 </ol>
 
 <h3 id="objectives">Objectives</h3>
 
-<p>Through this traditional vs. modern view of data processing, the students should have a much deeper understanding on the Big Data movement and form their own opinion on what's novel about Big Data systems.</p>
+<p>Through this traditional vs. modern view of data processing, the students should gain a much deeper understanding on the Big Data movement and form their own opinion on what's novel about Big Data systems.</p>
 
 
 <p>Furthermore, since this is a graduate seminar, another important objective is to train students to master basic skills for being a researcher. The course will create a number of opportunities for students to learn how to read a paper, how to write a paper review, how to give a good research talk, and how to ask questions during a talk?
@@ -124,12 +124,12 @@ ript>
 <h5>Data Model</h5>
     <ol start="2">
         <li> <a href="Papers/p377-codd.pdf">A Relational Model of Data for Large Shared Data Banks (1970)</a> </li>
-        <li> <a href="Papers/datamodel.pdf">What Goes Around Comes Around (1960-2000)</a></li>
+        <li> <a href="Papers/datamodel.pdf">What Goes Around Comes Around (Sec I~IV only) (1960-2000)</a></li>
      </ol>
 
  <h5>Traditional RDBMS</h5>
       <ol start="4">
-        <li> <a href="Papers/SystemR.pdf">System R: Relational Approach to Data Management (1976)</a> </li>
+        <li> <a href="Papers/history-of-system-r.pdf">A History and Evaluation of System R (1981)</a> </li>
         <li> <a href="Papers/postgres.pdf">The Design of Postgres (1986)</a> </li>
         <li> <a href="Papers/GammaDatabaseMachine.pdf">The Gamma database machine project (1990)</a></li>
       </ol>
@@ -137,8 +137,8 @@ ript>
  <h5>Transaction Management</h5>
       <ol start="7">
         <li> <a href="Papers/GrayLocks.pdf">Granularity of Locks and Degrees of Consistency in a Shared Data Base (1976, Part 1 only)</a> </li>
+        <li> <a href="Papers/GrayLocks.pdf">Granularity of Locks and Degrees of Consistency in a Shared Data Base (1976, Part 2 only)</a> </li>
         <li> <a href="Papers/occ-tods1981.pdf">On Optimistic Methods for Concurrency Control (1981)</a>  </li>
-        <li> <a href="Papers/p378-mohan.pdf">Transaction Management in the R* Distributed Database Management System (1986)</a> </li>
       </ol>
        <h5>Query Optimization</h5>
       <ol start="10">
@@ -146,51 +146,53 @@ ript>
         <li> <a href="Papers/Volcano.pdf">The Volcano Optimizer Generator: Extensibility and Efficient Search (1993)</a>  </li>
         <li> <a href="Papers/p261-avnur.pdf">Eddies: Continuously Adaptive Query Processing (2000)</a> </li>
       </ol>
-       <h5>Materialized Views and Data Cube</h5>
+       <h5>Interactive Analytics</h5>
       <ol start="13">
-        <li> <a href="Papers/p61-blakeley-view.pdf">Efficiently Updating Materialized Views (1986)</a> </li>
-        <li> <a href="Papers/cube.pdf">Data Cube: A Relational Aggregation Operator Generalizing Group-by, Cross-tab, and Sub-totals (1997)</a>  </li>
-        <li> <a href="Papers/p159-zhao-rolap.pdf">An Array-Based Algorithm for Simultaneous Multidimensional Aggregates (1997)</a> </li>
-      </ol>
-    <h5>Approximiate Query Processing</h5>
-      <ol start="16">
-        <li> <a href="Papers/sample-1986.pdf">Simple Random Sampling from Relational Databases (1986)</a> </li>
-        <li> <a href="Papers/online-aggregation.pdf">Informix under CONTROL: Online Query Processing (2000)</a>  </li>
-        <li> <a href="Papers/approximatequerkamir.pdf">Approximate Query Processing Using Wavelets (2000)</a> </li>
+        <li> <a href="Papers/cube.pdf">Data Cube: A Relational Aggregation Operator Generalizing Group-by, Cross-tab, and Sub-totals (1997) </a> </li>
+        <li> <a href="Papers/p159-zhao-rolap.pdf">An Array-Based Algorithm for Simultaneous Multidimensional Aggregates (1997)</a>  </li>
+        <li> <a href="Papers/online-aggregation.pdf">Informix under CONTROL: Online Query Processing (2000)</a> </li>
       </ol>
 
  <h4 id="part2">Part II: Modern Database Systems and Techniques (after 2000)</h4>
      <h5>Background</h5>
-      <ol start="19">
+      <ol start="16">
         <li> <a href="Papers/bigdatawhitepaper.pdf">Challenges and Opportunities with Big Data (2011)</a> </li>
     </ol>
 
     <h5>MapReduce and Beyond</h5>
-      <ol start="20">
+      <ol start="17">
         <li> <a href="Papers/mapreduce-osdi2004.pdf">MapReduce: Simplified Data Processing on Large Clusters (2003)</a> </li>
         <li> <a href="Papers/nsdi12-final138.pdf">Resilient Distributed Datasets: A Fault-tolerant Abstraction for In-memory Cluster Computing (2012)</a> </li>
         <li> <a href="Papers/p13-xin-shark.pdf">Shark: SQL and Rich Analytics at Scale (2013)</a></li>
       </ol>
 
     <h5>Column Store</h5>
-      <ol start="23">
+      <ol start="20">
         <li> <a href="Papers/stonebraker-cstore.pdf">C-store: A Column-oriented DBMS (2005)</a> </li>
-        <li><a href="Papers/monet-cidr2005.pdf">MonetDB/X100: Hyper-pipelining query execution (2005)</a></li>
         <li> <a href="Papers/dremel.pdf">Dremel: Interactive Analysis Of Web-Scale Datasets (2010)</a></li>
+        <li><a href="Papers/abadi-sigmod08.pdf">Column-Stores vs. Row-Stores: How Different Are They
+        Really?(2012)</a></li>
       </ol>
 
     <h5>NoSQL</h5>
-      <ol start="26">
+      <ol start="23">
         <li> <a href="Papers/bigtable-osdi06.pdf">Bigtable: A Distributed Storage System for Structured Data (2006)</a> </li>
         <li><a href="Papers/decandia07dynamo.pdf">Dynamo: Amazon's Highly Available Key-Value Store (2007)</a></li>
         <li> <a href="Papers/CAP-12years.pdf">CAP Twelve Years Later: How the "Rules" Have Changed (2012)</a></li>
       </ol>
 
     <h5>NewSQL</h5>
-      <ol start="29">
+      <ol start="26">
         <li> <a href="Papers/harizopoulos-2008.pdf">OLTP Through the Looking Glass, and What We Found There (2008)</a> </li>
         <li><a href="Papers/Hekaton.pdf">Hekaton: SQL Server's Memory-optimized OLTP Engine (2013)</a></li>
         <li> <a href="Papers/hyper.pdf">Efficiently Compiling Efficient Query Plans for Modern Hardware (2011)</a></li>
+      </ol>
+
+        <h5>ML over SQL</h5>
+      <ol start="29">
+        <li> <a href="Papers/systemML.pdf">SystemML: Declarative machine learning on MapReduce (2011)</a> </li>
+        <li><a href="Papers/madlib-vldb2012.pdf">The MADlib analytics library: or MAD skills, the SQL (2012)</a></li>
+        <li> <a href="Papers/tupleware.pdf">An Architecture for Compiling UDF-centric Workflows (2015)</a></li>
       </ol>
 
 
